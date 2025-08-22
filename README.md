@@ -1,7 +1,5 @@
-<img width="611" height="429" alt="Screenshot 2025-08-22 at 3 18 09 AM" src="https://github.com/user-attachments/assets/544b09d0-6a04-400d-bdbf-266bc3fcf938" />
 <img width="1257" height="692" alt="Screenshot 2025-08-22 at 3 30 02 AM" src="https://github.com/user-attachments/assets/e689212a-3971-4c3a-b331-e30880dc1d90" />
-
-
+<img width="611" height="429" alt="Screenshot 2025-08-22 at 3 18 09 AM" src="https://github.com/user-attachments/assets/544b09d0-6a04-400d-bdbf-266bc3fcf938" />
 # Automated Power Line Inspection System
 
 An innovative computer vision system designed to enhance power line infrastructure maintenance through automated detection of potential hazards and foreign objects. This project combines classical computer vision techniques with modern deep learning approaches to create a robust, real-time inspection solution.
