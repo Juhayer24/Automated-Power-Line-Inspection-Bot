@@ -8,10 +8,22 @@ import logging
 from typing import Union, Tuple, Optional
 import cv2
 import numpy as np
+import platform
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Check if we're on a Raspberry Pi
+IS_RASPBERRY_PI = platform.machine().startswith('arm') or platform.machine().startswith('aarch')
+
+# Try to import picamera2, but don't raise error if not available
+try:
+    from picamera2 import Picamera2
+    PICAMERA_AVAILABLE = True
+except ImportError:
+    PICAMERA_AVAILABLE = False
+    logger.info("picamera2 module not available - this is normal on non-Raspberry Pi systems")
 
 class VideoSource:
     """
@@ -37,11 +49,10 @@ class VideoSource:
         self._picam = None
         self._is_running = False
         
-        # Try picamera2 if requested
-        if use_picamera:
+        # Try picamera2 if requested and available on Raspberry Pi
+        if use_picamera and IS_RASPBERRY_PI and PICAMERA_AVAILABLE:
+            logger.info("Initializing Raspberry Pi Camera...")
             try:
-                from picamera2 import Picamera2
-                logger.info("Initializing Raspberry Pi Camera...")
                 self._picam = Picamera2()
                 
                 # Configure camera
