@@ -1,6 +1,6 @@
-!<img width="611" height="429" alt="Screenshot 2025-08-22 at 3 18 09 AM" src="https://github.com/user-attachments/assets/544b09d0-6a04-400d-bdbf-266bc3fcf938" />
+<img width="611" height="429" alt="Screenshot 2025-08-22 at 3 18 09 AM" src="https://github.com/user-attachments/assets/544b09d0-6a04-400d-bdbf-266bc3fcf938" />
+<img width="1257" height="692" alt="Screenshot 2025-08-22 at 3 30 02 AM" src="https://github.com/user-attachments/assets/e689212a-3971-4c3a-b331-e30880dc1d90" />
 
-[powerline1](https://github.com/user-attachments/assets/5299cf93-67de-4f9e-8175-d2407985a7ff)
 
 # Automated Power Line Inspection System
 
