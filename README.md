@@ -1,18 +1,39 @@
-# Automated Power Line Inspection Bot 🤖 🔌
+# Automated Power Line Inspection System
 
-An intelligent robotic system for automated power line inspection using computer vision and robotics. This project combines classical CV techniques and modern deep learning (YOLO) to detect power lines and potential hazards, with optional Raspberry Pi support for field deployments.
+An innovative computer vision system designed to enhance power line infrastructure maintenance through automated detection of potential hazards and foreign objects. This project combines classical computer vision techniques with modern deep learning approaches to create a robust, real-time inspection solution.
 
-## 🌟 Features
+## Project Overview
 
-- Real-time power line detection using classical CV or YOLO
-- Support for multiple input sources (webcam, video files, Pi camera)
-- State machine for reliable hazard detection
-- Detailed CSV logging with timestamps and metrics
-- Video recording and frame extraction utilities
-- Raspberry Pi GPIO integration for robotic control
-- ONNX export support for optimized inference
+Power line infrastructure maintenance is critical for ensuring reliable electricity distribution and preventing outages. Manual inspection is time-consuming, expensive, and can be dangerous. This system provides:
 
-## 🚀 Quickstart
+- Real-time detection of foreign objects and hazards near power lines
+- Automated monitoring and early warning system
+- Cost-effective alternative to manual inspection
+- Enhanced safety through remote monitoring capabilities
+
+## Key Features
+
+### Core Detection System
+- **Classical Computer Vision Pipeline**
+  - Advanced edge detection using adaptive Canny algorithms
+  - Hough transform for power line identification
+  - Contour analysis for foreign object detection
+  - Robust against varying lighting conditions
+
+- **Deep Learning Integration**
+  - YOLOv8-based object detection
+  - Custom-trained models for specific hazard types
+  - Real-time inference optimization
+  - ONNX export support for deployment
+
+### System Features
+- Multi-source video input support (cameras, video files)
+- Real-time processing and hazard detection
+- Comprehensive logging and monitoring system
+- Flexible deployment options (Desktop/Raspberry Pi)
+- Remote monitoring capabilities
+
+## Getting Started
 
 1. Clone the repository:
 ```bash
@@ -31,9 +52,9 @@ source .venv/bin/activate
 ./run.sh
 ```
 
-## 📚 Usage Examples
+## System Implementation
 
-### Laptop/Desktop Mode
+### Desktop Implementation
 
 1. Run with webcam using classical CV:
 ```bash
@@ -62,14 +83,16 @@ python3 scripts/extract_frames.py \
     --resize 640x480
 ```
 
-### Raspberry Pi Mode
+### Field Deployment (Raspberry Pi)
 
-1. Basic Pi setup with classical CV:
+The system can be deployed on Raspberry Pi hardware for field installations:
+
+1. Standard deployment with classical CV processing:
 ```bash
 python3 src/app.py --use-pi --detector classic
 ```
 
-2. Full Pi deployment with YOLO and logging:
+2. Advanced deployment with deep learning and telemetry:
 ```bash
 python3 src/app.py \
     --use-pi \
@@ -79,7 +102,7 @@ python3 src/app.py \
     --record
 ```
 
-## 🛠️ YOLO Training
+## Deep Learning Implementation
 
 This project supports YOLOv8 models for power line detection. To train your own model:
 
@@ -93,15 +116,15 @@ python3 scripts/export_yolo_onnx.py \
     --image data/images/test.jpg
 ```
 
-## 🤖 Raspberry Pi Setup
+## Hardware Implementation
 
-### Hardware Requirements
+### System Requirements
 - Raspberry Pi 4 (recommended) or 3B+
 - Pi Camera Module or USB webcam
 - Servo motors for movement control
 - Power supply (5V, 2.5A minimum)
 
-### GPIO Wiring Safety ⚠️
+### Safety Considerations for GPIO Implementation
 1. Always power off the Pi before connecting/disconnecting components
 2. Use appropriate voltage levels (3.3V for GPIO)
 3. Include resistors for LED indicators
@@ -114,7 +137,7 @@ python3 scripts/export_yolo_onnx.py \
 - Enable Pi camera hardware encoding for recording
 - Monitor CPU temperature during extended operation
 
-## 📊 Logging and Analysis
+## Data Collection and Analysis
 
 The system generates detailed CSV logs including:
 - Timestamps
@@ -141,7 +164,7 @@ logger.write_event(
 )
 ```
 
-## 🔬 Development
+## Development Architecture
 
 ### Project Structure
 ```
@@ -166,15 +189,17 @@ Automated-Power-Line-Inspection-Bot/
 3. Update tests if applicable
 4. Document new parameters in docstrings
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions to enhance the system's capabilities. Please review our Contributing Guidelines before submitting pull requests.
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
+
+Special thanks to:
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
 - OpenCV community
