@@ -1,4 +1,3 @@
-# src/utils/geometry.py
 import math
 
 def bbox_center(bbox):
@@ -7,8 +6,9 @@ def bbox_center(bbox):
 
 def pixel_to_angle(center_x, frame_width, hfov_deg=60.0):
     """
-    Convert horizontal pixel offset to an angle in degrees.
-    hfov_deg: camera horizontal field of view (estimate if unknown)
+    Figures out what angle we need to turn the camera.
+    Takes the x position in the image and converts it to degrees.
+    You can tweak hfov_deg if your camera has a different field of view.
     """
     dx = center_x - (frame_width / 2.0)
     angle = (dx / (frame_width / 2.0)) * (hfov_deg / 2.0)

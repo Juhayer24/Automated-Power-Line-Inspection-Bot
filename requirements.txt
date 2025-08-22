@@ -1,0 +1,51 @@
+# Core computer vision
+opencv-python>=4.8.0     # Stable version with good compatibility
+numpy>=1.24.0           # Required by OpenCV and other packages
+scipy>=1.11.0           # Scientific computing
+scikit-image>=0.21.0    # Additional image processing
+Pillow>=10.0.0          # Python Imaging Library
+
+# Deep learning - see note below about PyTorch
+torch>=2.0.0            # Install appropriate wheel from pytorch.org
+torchvision>=0.15.0     # Should match torch version
+ultralytics>=8.0.0      # YOLO implementation
+onnxruntime>=1.15.0     # Optimized inference
+
+# Data processing and visualization
+pandas>=2.0.0           # Data manipulation
+matplotlib>=3.7.0       # Plotting and visualization
+tqdm>=4.65.0           # Progress bars
+
+# Web interface
+Flask>=2.3.0           # Web framework
+Werkzeug>=2.3.0        # Required by Flask
+
+# Development
+pytest>=7.4.0          # Testing
+black>=23.7.0          # Code formatting
+pylint>=2.17.0         # Code analysis
+
+# =================================================================
+# IMPORTANT NOTE ABOUT PYTORCH:
+# The torch and torchvision packages above should be installed
+# according to your specific platform (CPU/GPU/Mac M1/M2).
+# Visit https://pytorch.org/get-started/locally/ and select:
+# 1. Your operating system
+# 2. Your package manager (pip)
+# 3. Your compute platform (CUDA version if using GPU)
+# Then use the provided command to install the correct PyTorch version.
+# =================================================================
+
+# =================================================================
+# RASPBERRY PI SPECIFIC PACKAGES
+# Uncomment these when deploying to a Raspberry Pi:
+# picamera2             # Modern Pi camera interface
+# RPi.GPIO             # GPIO control
+# pigpio               # Advanced GPIO
+# gpiozero             # High-level GPIO interface
+# adafruit-circuitpython-servokit  # For servo control
+# =================================================================
+
+# Optional: Deep learning acceleration
+# tensorflow-lite       # If using TF-Lite models
+# coral-tpu            # If using Coral USB accelerator

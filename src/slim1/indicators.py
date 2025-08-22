@@ -1,4 +1,3 @@
-# src/sim/indicators.py
 import cv2
 import math
 

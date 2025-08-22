@@ -1,4 +1,3 @@
-# src/utils/io.py
 import cv2
 import os
 
