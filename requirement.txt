@@ -1,0 +1,7 @@
+opencv-python
+numpy
+torch            # if using torch-based YOLO/backends
+torchvision
+ultralytics      # optional; highly recommended for YOLOv8 interface
+tqdm
+matplotlib       # for plotting results
